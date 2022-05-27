@@ -16,19 +16,33 @@ exports.create = (req,res) => {
     typeMachine
         .save(typeMachine)
         .then(data => {
-            res.send(data);
+            //res.send(data);
+            res.redirect('/add-type-machine');
         })
         .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while creating a Create" });});
 }
 
-//return all types machine
+//return single type machine or all types machine
 
 exports.find = (req,res) => {
-    typeMachineDB.find()
-    .then(typeMachine => {
-        res.send(typeMachine)
-    })
-    .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while retrieving a Find" });});
+    if(req.query.id){
+        const id = req.query.id;
+        typeMachineDB.findById(id)
+            .then(data => {
+                if(!data){
+                    res.status(404).send({message: err.message || "Not found type machine with that id"})
+                } else {
+                    res.send(data);
+                }
+            })
+            .catch(err =>{res.status(500).send({message: "Error while retrieving type machine with that id"});});
+    }else{
+        typeMachineDB.find()
+            .then(typeMachine => {
+                res.send(typeMachine)
+            })
+            .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while retrieving a Find" });});
+    }
 }
 
 //update a row in the collection by type machine id

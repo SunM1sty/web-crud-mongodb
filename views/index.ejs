@@ -22,19 +22,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% for(var i = 0; i < typeMachines.length; i++) {%>
                     <tr>
-                        <td>1</td>
-                        <td>BMW</td>
-                        <td>USA</td>
+                        <td> <%= i + 1%> </td>
+                        <td> <%= typeMachines[i].brand %> </td>
+                        <td> <%= typeMachines[i].country %> </td>
                         <td>
-                            <a href="/update-type-machine" class="btn border-shadow update">
+                            <a href="/update-type-machine?id=<%= typeMachines[i]._id%>" class="btn border-shadow update">
                                 <span class="text-gradient">Edit</span>
                             </a>
-                            <a href="#" class="btn border-shadow delete">
+                            <a class="btn border-shadow delete" data-id=<%= typeMachines[i]._id %> >
                                 <span class="text-gradient">Delete</span>
                             </a>
                         </td>
                     </tr>
+                    <% } %>
                 </tbody>
             </table>
         </form>
