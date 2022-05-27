@@ -2,45 +2,45 @@
     <%- include('include/_header') %>
 <!--/include header-->
 
-    <main id="main-content">
-        <div class="container">
-            <div class="box-nav d-flex-justify-between">
-                <a href="/add-type-machine" class="border-shadow">
-                    <span class="text-gradient">new type machine<i class="fa-solid fa-computer-classic"></i></span>
-                </a>
-            </div>
-
-            <!--crud form-->
-            <form action="/" method="post">
-                <table class="table-type-machine">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>id</th>
-                            <th>brand</th>
-                            <th>country</th>
-                            <th>action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>bmw</td>
-                            <td>usa</td>
-                            <td>
-                                <a href="#" class="btn border-shadow update">
-                                    <span class="text-gradient">edit</span>
-                                </a>
-                                <a href="#" class="btn border-shadow delete">
-                                    <span class="text-gradient">delete</span>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-            <!--/crud form-->
+<main id="main-content">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-type-machine" class="border-shadow">
+                <span class="text-gradient">New Type Machine <i class="fa-solid fa-computer-classic"></i></span>
+            </a>
         </div>
-    </main>
+
+        <!--crud form-->
+        <form action="/" method="post">
+            <table class="table-type-machine">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Brand</th>
+                        <th>Country</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>BMW</td>
+                        <td>USA</td>
+                        <td>
+                            <a href="/update-type-machine" class="btn border-shadow update">
+                                <span class="text-gradient">Edit</span>
+                            </a>
+                            <a href="#" class="btn border-shadow delete">
+                                <span class="text-gradient">Delete</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <!--/crud form-->
+    </div>
+</main>
 
 <!--include footer-->
 <%- include('include/_footer') %>

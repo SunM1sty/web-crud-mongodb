@@ -1,0 +1,40 @@
+<!--include header-->
+<%- include('include/_header') %>
+<!--/include header-->
+
+<main id="main-content">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"> <i class="fas fa-angle-double-left"></i>All Types Machine</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Create Type Machine</h2>
+            <span class="text-light">Use the form to create a new Type Machine</span>
+        </div>
+
+        <!--crud form-->
+        <form method="post" id="add_type_machine">
+            <div class="new_type_machine">
+                <div class="form-group">
+                    <label for="country" class="text-light">Country</label>
+                    <input type="hidden" name="id" value="">
+                    <input type="text" name="country" value="" placeholder="Russia">
+                </div>
+                <div class="form-group">
+                    <label for="brand" class="text-light">Brand</label>
+                    <input type="text" name="brand" value="" placeholder="Lada">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+            </div>
+        </form>
+        <!--/crud form-->
+    </div>
+</main>
+
+<!--include footer-->
+<%- include('include/_footer') %>
+<!--/include footer-->
