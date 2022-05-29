@@ -28,6 +28,11 @@ a {
     font-weight: bold;
 }
 
+main{
+    width: 100%;
+    height: 100%;
+}
+
 .d-flex{
     display: flex;
     flex-wrap: wrap;
@@ -59,14 +64,10 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: black;
 }
 
 #header nav{
-    background-color: #06d6a0;
     padding: 1em 0;
     width: 100%;
 }
@@ -78,7 +79,7 @@ a {
 
 #main-content .container .box-nav>a{
     font-size: 1em;
-    padding: 0.5em 1em;
+    padding: 0.5em 2em;
 }
 
 #main-content .container form{
@@ -94,7 +95,7 @@ table{
     padding: 0.75em;
     vertical-align: top;
     text-align: center;
-    border-top: 1px solid var(--border);
+    border: 1px solid var(--border);
 }
 
 .table-type-machine td > a.btn{
@@ -103,18 +104,13 @@ table{
     margin: 0 0.2em;
 }
 
-.table-type-machine tr:hover{
-    background-color: #06d6a0;
-}
-
 .table-type-machine tr:hover td > a{
     box-shadow: none;
     background-color: white;
 }
 
 .table-type-machine .thead-dark th{
-    color: white;
-    background-color: var(--dark);
+    color: black;
     border-color: #32383e; 
 }
 
@@ -134,8 +130,7 @@ table{
     }
 
     td{
-        border: none;
-        border-bottom: 1px solid var(--border);
+        border: 1px solid var(--border);
         position: relative;
     }
 }
@@ -174,7 +169,6 @@ table{
 #add_type_machine .form-group .btn{
     width: 100%;
     padding: 0.9em 1em;
-    background-color: #16db93;
     border: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -187,4 +181,12 @@ table{
 #add_type_machine .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
+}
+
+.btn.border-shadow{
+    border-radius: 15px;
+}
+
+a.border-shadow{
+    border-radius: 15px;
 }

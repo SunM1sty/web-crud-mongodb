@@ -1,4 +1,4 @@
-var typeMachineDB = require('../model/type_machine');
+var typeRepairDB = require('../model/type_repair');
 
 //create a new row
 
@@ -8,44 +8,46 @@ exports.create = (req,res) => {
         return;
     }
 
-    const typeMachine = new typeMachineDB({
-        country: req.body.country,
-        brand: req.body.brand
+    const typeRepair = new typeRepairDB({
+        name: req.body.name,
+        duration: req.body.duration,
+        price: req.body.price,
+        notes: req.body.notes
     })
 
-    typeMachine
-        .save(typeMachine)
+    typeRepair
+        .save(typeRepair)
         .then(data => {
             res.send(data);
-            //res.redirect('/add-type-machine');
+            //res.redirect('/add-type-repair');
         })
         .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while creating a Create" });});
 }
 
-//return single type machine or all types machine
+//return single type RetypeRepair or all types RetypeRepair
 
 exports.find = (req,res) => {
     if(req.query.id){
         const id = req.query.id;
-        typeMachineDB.findById(id)
+        typeRepairDB.findById(id)
             .then(data => {
                 if(!data){
-                    res.status(404).send({message: err.message || "Not found type machine with that id"})
+                    res.status(404).send({message: err.message || "Not found type typeRepair with that id"})
                 } else {
                     res.send(data);
                 }
             })
-            .catch(err =>{res.status(500).send({message: "Error while retrieving type machine with that id"});});
+            .catch(err =>{res.status(500).send({message: "Error while retrieving type typeRepair with that id"});});
     }else{
-        typeMachineDB.find()
-            .then(typeMachine => {
-                res.send(typeMachine)
+        typeRepairDB.find()
+            .then(typeRepair => {
+                res.send(typeRepair)
             })
             .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while retrieving a Find" });});
     }
 }
 
-//update a row in the collection by type machine id
+//update a row in the collection by type RetypeRepair id
 
 exports.update = (req,res) => {
     if(!req.body){
@@ -55,7 +57,7 @@ exports.update = (req,res) => {
     }
     
     const id = req.params.id;
-    typeMachineDB.findByIdAndUpdate(id,req.body,{useFindAndModify: false})
+    typeRepairDB.findByIdAndUpdate(id,req.body,{useFindAndModify: false})
         .then(data =>{
             if(!data) {
                 res.status(404).send({message: 'Cannot Update a row with that id'});
@@ -64,7 +66,7 @@ exports.update = (req,res) => {
             }
         })
         .catch(error => {
-            res.status(500).send({message: "Error Update type machine information"})
+            res.status(500).send({message: "Error Update type typeRepair information"})
         })
 }
 
@@ -72,7 +74,7 @@ exports.update = (req,res) => {
 
 exports.delete = (req,res) => {
     const id = req.params.id;
-    typeMachineDB.findByIdAndDelete(id)
+    typeRepairDB.findByIdAndDelete(id)
         .then(data =>{
             if(!data) {
                 res.status(404).send({message: 'Cannot Delete a row with that id'});
@@ -81,6 +83,6 @@ exports.delete = (req,res) => {
             }
         })
         .catch(error => {
-            res.status(500).send({message: "Error Delete type machine with id = " + id})
+            res.status(500).send({message: "Error Delete type RetypeRepair with id = " + id})
         })
 }
