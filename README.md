@@ -1,12 +1,24 @@
 University project: MongoDB, Express
 
-```
-Launch project:
-1) cloning repo
-2) npm install
-3) npm start
-```
-#Docker
-```
-    Coming soon
-```
+# Data Management Lab
+
+## Prerequisites
+
+- **Client-Side**
+  - Node.js v16.13.1
+
+- **Server-Side**
+  - MongoDB (you can use Docker instead)
+
+- **Other**
+  - docker
+  - docker-compose
+
+- **Launch**
+    - clone the repo
+    - npm install
+    - npm start
+
+    ***Or***
+    - docker-compose build
+    - docker-compose up
