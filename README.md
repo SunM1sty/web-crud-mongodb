@@ -22,3 +22,6 @@ University project: MongoDB, Express
     ***Or***
     - docker-compose build
     - docker-compose up
+
+- **Check this out**
+   - Open http:localhost:3000/ to check opened project
