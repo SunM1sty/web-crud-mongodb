@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --dark:#2b2d42;
+    --light: #adb6db;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav-brand{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    border:1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+
+.text-dark{
+    color:var(--dark);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-gradient{
+    color: black;
+}
+
+#header nav{
+    padding: 1em 0;
+    width: 100%;
+}
+
+#main-content{
+    margin-top: 6em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-content .container .box-nav>a{
+    font-size: 1em;
+    padding: 0.5em 2em;
+}
+
+#main-content .container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.table-type-machine td, .table-type-machine thб{
+    padding: 0.75em;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.table-type-machine td > a.btn{
+    padding: 0.3em 1em;
+    font-size: 1.1em;
+    margin: 0 0.2em;
+}
+
+.table-type-machine tr:hover td > a{
+    box-shadow: none;
+    background-color: white;
+}
+
+.table-type-machine .thead-dark th{
+    color: black;
+    border-color: #32383e; 
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display:block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr{
+        border: 1px solid var(--border);
+    }
+
+    td{
+        border: 1px solid var(--border);
+        position: relative;
+    }
+}
+
+/*add type machine and update that*/
+
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title > h2{
+    padding: 0.5em 0;
+}
+
+.new_type_machine{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_type_machine .form-title, #add_type_machine .form-title,
+#add_machine .form-title, #update_machine .form-title{
+    margin: 0.4em 0;
+}
+
+#update_type_machine .form-group input[type="text"],
+#add_type_machine .form-group input[type="text"],
+#add_machine .form-group input[type="text"],
+#update_machine .form-group input[type="text"]{
+    width: 100%;
+    padding: 0.6em 1em;
+    margin: 0.5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    border-radius: 0.2em;
+}
+
+#update_type_machine .form-group .btn,
+#add_type_machine .form-group .btn,
+#add_machine .form-group .btn,
+#update_machine .form-group .btn{
+    width: 100%;
+    padding: 0.9em 1em;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0.2em;
+    margin: 0.5em 0;
+}
+
+#update_type_machine .form-group .btn:hover,
+#add_type_machine .form-group .btn:hover,
+#add_machine .form-group .btn:hover,
+#update_machine .form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
+}
+
+.btn.border-shadow{
+    border-radius: 15px;
+}
+
+a.border-shadow{
+    border-radius: 15px;
+}
