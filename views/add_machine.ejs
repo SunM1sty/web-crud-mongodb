@@ -1,0 +1,66 @@
+<!--include header-->
+<%- include('include/_header') %>
+<!--/include header-->
+
+<main id="main-content">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/machine"> <i class="fas fa-angle-double-left"></i>All Machines</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Create Machine</h2>
+            <span class="text-light">Use the form to create a new Machine</span>
+        </div>
+
+        <!--crud form-->
+        <form action="/api/machine" method="post" id="add_machine">
+            <div class="new_type_machine">
+                <div class="form-group">
+                    <label for="dateIssue" class="text-light">Date Issue</label>
+                    <input type="hidden" name="id" value="">
+                    <input type="text" name="dateIssue" value="" placeholder="Enter a Date Issue...">
+                </div>
+                <div class="form-group">
+                    <label for="typeMachine" class="text-light">Type Machine</label>
+                    <input type="text" name="typeMachine" value="" placeholder="Enter a Type Machine...">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+            </div>
+        </form>
+        <!--/crud form-->
+        <div>
+            <h2>
+                Collection of Types Machine
+            </h2>
+            <form action="/" method="post">
+                <table class="table-type-machine">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Brand</th>
+                        <th>Country</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for(var i = 0; i < typeMachines.length; i++) {%>
+                        <tr>
+                            <td> <%= typeMachines[i]._id    %> </td>
+                            <td> <%= typeMachines[i].brand %> </td>
+                            <td> <%= typeMachines[i].country %> </td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<!--include footer-->
+<%- include('include/_footer') %>
+<!--/include footer-->

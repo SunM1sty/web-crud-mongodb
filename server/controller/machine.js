@@ -16,8 +16,7 @@ exports.create = (req,res) => {
     machine
         .save(machine)
         .then(data => {
-            res.send(data);
-            //res.redirect('/add-machine');
+            res.redirect('/add-machine');
         })
         .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while creating a Create" });});
 }

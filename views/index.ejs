@@ -5,42 +5,13 @@
 <main id="main-content">
     <div class="container">
         <div class="box-nav d-flex justify-between">
-            <a href="/add-type-machine" class="border-shadow">
-                <span class="text-gradient">New Type Machine <i class="fa-solid fa-computer-classic"></i></span>
+            <a href="/type-machine" class="border-shadow">
+                <span class="text-gradient">Type Machine <i class="fa-solid fa-computer-classic"></i></span>
+            </a>
+            <a href="/machine" class="border-shadow">
+                <span class="text-gradient">Machine <i class="fa-solid fa-computer-classic"></i></span>
             </a>
         </div>
-
-        <!--crud form-->
-        <form action="/" method="post">
-            <table class="table-type-machine">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Brand</th>
-                        <th>Country</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% for(var i = 0; i < typeMachines.length; i++) {%>
-                    <tr>
-                        <td> <%= i + 1%> </td>
-                        <td> <%= typeMachines[i].brand %> </td>
-                        <td> <%= typeMachines[i].country %> </td>
-                        <td>
-                            <a href="/update-type-machine?id=<%= typeMachines[i]._id%>" class="btn border-shadow update">
-                                <span class="text-gradient">Edit</span>
-                            </a>
-                            <a class="btn border-shadow delete" data-id=<%= typeMachines[i]._id %> >
-                                <span class="text-gradient">Delete</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <% } %>
-                </tbody>
-            </table>
-        </form>
-        <!--/crud form-->
     </div>
 </main>
 

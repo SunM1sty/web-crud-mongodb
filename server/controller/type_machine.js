@@ -16,8 +16,7 @@ exports.create = (req,res) => {
     typeMachine
         .save(typeMachine)
         .then(data => {
-            res.send(data);
-            //res.redirect('/add-type-machine');
+            res.redirect('/add-type-machine');
         })
         .catch(err =>{res.status(500).send({message: err.message || "Some errors occurred while creating a Create" });});
 }
@@ -60,7 +59,7 @@ exports.update = (req,res) => {
             if(!data) {
                 res.status(404).send({message: 'Cannot Update a row with that id'});
             }else {
-                res.send(data);
+                res.redirect('/update-type-machine');
             }
         })
         .catch(error => {

@@ -13,6 +13,8 @@ const repairController = require('../controller/repair');
  */
 
 route.get('/',services.homeRoutes)
+route.get('/type-machine',services.typeMachine)
+route.get('/machine',services.machine)
 
 /**
  * @description Create a Type Machine
@@ -20,13 +22,15 @@ route.get('/',services.homeRoutes)
  */
 
 route.get('/add-type-machine',services.addTypeMachine);
+route.get('/add-machine',services.addMachine);
 
 /**
  * @description Update a Type Machine
- * @method GET /update-type-machine
+ * @method GET /update-type-machine and /update-machine
  */
 
 route.get('/update-type-machine',services.updateTypeMachine);
+route.get('/update-machine',services.updateMachine);
 
 //API
 //Type Machine

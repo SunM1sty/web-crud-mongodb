@@ -91,7 +91,7 @@ table{
     width: 100%;
 }
 
-.table-type-machine td, .table-type-machine th{
+.table-type-machine td, .table-type-machine thб{
     padding: 0.75em;
     vertical-align: top;
     text-align: center;
@@ -150,12 +150,15 @@ table{
     margin: auto;
 }
 
-#update_type_machine .form-title, #add_type_machine .form-title{
+#update_type_machine .form-title, #add_type_machine .form-title,
+#add_machine .form-title, #update_machine .form-title{
     margin: 0.4em 0;
 }
 
 #update_type_machine .form-group input[type="text"],
-#add_type_machine .form-group input[type="text"]{
+#add_type_machine .form-group input[type="text"],
+#add_machine .form-group input[type="text"],
+#update_machine .form-group input[type="text"]{
     width: 100%;
     padding: 0.6em 1em;
     margin: 0.5em 0;
@@ -166,7 +169,9 @@ table{
 }
 
 #update_type_machine .form-group .btn,
-#add_type_machine .form-group .btn{
+#add_type_machine .form-group .btn,
+#add_machine .form-group .btn,
+#update_machine .form-group .btn{
     width: 100%;
     padding: 0.9em 1em;
     border: none;
@@ -178,7 +183,9 @@ table{
 }
 
 #update_type_machine .form-group .btn:hover,
-#add_type_machine .form-group .btn:hover{
+#add_type_machine .form-group .btn:hover,
+#add_machine .form-group .btn:hover,
+#update_machine .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }
