@@ -7,7 +7,7 @@ var schema = new mongoose.Schema({
     },
     typeMachine: {
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        require: false,
         ref: 'typeMachineDB'
     }
 })

@@ -51,12 +51,19 @@ exports.updateTypeMachine = (req,res) => {
 }
 
 exports.updateMachine = (req,res) => {
+    let data = {};
+    axios.get('http://localhost:3000/api/type-machine')
+    .then(function (response){
+        data = response.data;
+    })
     axios.get('http://localhost:3000/api/machine',{params: {id: req.query.id}})
         .then(function (machineData){
-            res.render('update_machine', {machines: machineData.data});
+            res.render('update_machine', {machines: machineData.data, typeMachines: data});
         })
         .catch(err =>{
             res.send(err);
         })
 }
+
+
 

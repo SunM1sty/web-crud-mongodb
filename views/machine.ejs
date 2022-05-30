@@ -6,10 +6,10 @@
     <div class="container">
         <div class="box-nav d-flex justify-between">
             <a href="/add-machine" class="border-shadow">
-                <span class="text-gradient">New Machine <i class="fa-solid fa-computer-classic"></i></span>
+                <span class="text-gradient">New Machine <i class="fa-solid fa-desktop"></i></span>
             </a>
             <a href="/" class="border-shadow">
-                <span class="text-gradient">Back to Main Page<i class="fa-solid fa-computer-classic"></i></span>
+                <span class="text-gradient">Back to Home <i class="fa-solid fa-house"></i></span>
             </a>
         </div>
 
@@ -30,8 +30,8 @@
                     <tr>
                         <td> <%= i + 1%> </td>
                         <td> <%= machines[i].dateIssue %> </td>
-                        <td> <%= machines[i].typeMachine.country %> </td>
-                        <td> <%= machines[i].typeMachine.brand %> </td>
+                        <td> <%= machines[i].typeMachine.country == null ? "This type of machine was deleted" : machines[i].typeMachine.country%> </td>
+                        <td> <%= machines[i].typeMachine.brand == null ? "This type of machine was deleted" : machines[i].typeMachine.brand %> </td>
                         <td>
                             <a href="/update-machine?id=<%= machines[i]._id%>" class="btn border-shadow update-machine">
                                 <span class="text-gradient">Edit</span>
