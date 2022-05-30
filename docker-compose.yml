@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mongo:latest
+    env_file:
+      - config.env 
+    ports:
+      - 27017:27017
+    restart: always
+
+  main:
+    build:
+      context:  .
+    env_file:
+      - config.env
+    volumes:
+      - .:/app/client
+      - /app/client/node_modules
+    ports:
+      - 3000:3000 
+      - 9229:9229
+    command: npm start
+    depends_on:
+      - db 
+    restart: always

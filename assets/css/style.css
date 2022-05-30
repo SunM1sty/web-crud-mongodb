@@ -49,10 +49,18 @@ main{
 .border-shadow{
     border:1px solid var(--border-btn);
     box-shadow: 1px 3px 10px #e9ecef;
+    transition: all;
+    transition-duration: 300ms;
 }
 
 .text-dark{
     color:var(--dark);
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.text-dark:hover{
+    color: var(--light)
 }
 
 .inline{
@@ -91,7 +99,7 @@ table{
     width: 100%;
 }
 
-.table-type-machine td, .table-type-machine thб{
+.table-type-machine td, .table-type-machine th{
     padding: 0.75em;
     vertical-align: top;
     text-align: center;
@@ -102,6 +110,8 @@ table{
     padding: 0.3em 1em;
     font-size: 1.1em;
     margin: 0 0.2em;
+    transition: all;
+    transition-duration: 300ms;
 }
 
 .table-type-machine tr:hover td > a{
@@ -180,6 +190,20 @@ table{
     cursor: pointer;
     border-radius: 0.2em;
     margin: 0.5em 0;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.btn, a.border-shadow{
+    border-radius: 15px;
+}
+
+.btn{
+    border-radius: 40px;
+}
+
+a.border-shadow:hover{
+    background-color: #adb6db;
 }
 
 #update_type_machine .form-group .btn:hover,
@@ -188,12 +212,4 @@ table{
 #update_machine .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
-}
-
-.btn.border-shadow{
-    border-radius: 15px;
-}
-
-a.border-shadow{
-    border-radius: 15px;
 }

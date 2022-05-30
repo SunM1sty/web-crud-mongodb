@@ -5,8 +5,8 @@
 <main id="main-content">
     <div class="container">
         <div class="box-nav d-flex justify-between">
-            <div class="filter">
-                <a href="/machine"> <i class="fas fa-angle-double-left"></i>All Machines</a>
+            <div class="filter box-nav d-flex justify-between">
+                <a href="/machine" class="border-shadow"><i class="fa-solid fa-arrow-left"></i> All Machines</a>
             </div>
         </div>
         <div class="form-title text-center">
@@ -32,6 +32,31 @@
             </div>
         </form>
         <!--/crud form-->
+        <div>
+            <h2>
+                Collection of Types Machine
+            </h2>
+            <form action="/" method="post">
+                <table class="table-type-machine">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Brand</th>
+                        <th>Country</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for(var i = 0; i < typeMachines.length; i++) {%>
+                        <tr>
+                            <td> <%= typeMachines[i]._id    %> </td>
+                            <td> <%= typeMachines[i].brand %> </td>
+                            <td> <%= typeMachines[i].country %> </td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </div>
 </main>
 
